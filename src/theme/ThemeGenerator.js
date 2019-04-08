@@ -12,10 +12,11 @@ export default class ThemeGenerator {
         'success': '#339757',
         'warning': '#fcaa32',
         'danger': '#FF0000',
-        'info': '#5d5d66'
+        'info': '#5d5d66',
+        'fieldbg': '#e6e6e6'
       },
       'dark': {
-        'primary': '#3688aa',
+        'primary': '#0d6184',
         'secondary': '#c45249',
         'tertiary': '#4f6391',
         'background': '#000000',
@@ -23,7 +24,8 @@ export default class ThemeGenerator {
         'success': '#339757',
         'warning': '#ee9a26',
         'danger': '#FF0000',
-        'info': '#74748d'
+        'info': '#74748d',
+        'fieldbg': '#2b2b2b'
       }
     }
 

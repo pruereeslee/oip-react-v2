@@ -1,3 +1,4 @@
+
 // Create your Styles. Remember, since React-JSS uses the default preset,
 // most plugins are available without further configuration needed.
 const styles = theme => ({
@@ -34,14 +35,19 @@ const styles = theme => ({
   },
   // selects and inputs
   selectBase: {
-    backgroundColor: theme.palette.background.main,
+    backgroundColor: theme.palette.fieldbg.main,
     color: theme.palette.text.main,
     border: 'none',
-    borderBottom: `1px solid ${theme.palette.primary.main}`,
+    borderBottom: `0px solid ${theme.palette.primary.main}`,
+    borderRadius: 0,
     margin: [0, 5, 10],
-    fontSize: 14,
-    padding: 3,
+    fontSize: 16,
+    padding: 5,
     cursor: 'default',
+    select: `
+-webkit-appearance: none;
+-webkit-border-radius: 0px;
+`,
     '&:hover': {
       // backgroundColor: theme.palette.info.bright[3]
       cursor: 'pointer'
@@ -69,18 +75,30 @@ const styles = theme => ({
   },
   // buttons
   buttonBase: {
-    backgroundColor: theme.palette.background.main,
-    color: theme.palette.text.main,
+    color: '#000',
     border: 'none'
   },
   fnButtons: {
     cursor: 'pointer',
+    color: '#fff',
+    backgroundColor: theme.palette.primary.main,
+    textTransform: 'uppercase',
+    borderRadius: 3,
+    padding: [12, 30],
+    boxShadow: `
+    0 2px 2px 0 rgba(109, 109, 109, 0.14), 0 3px 1px -2px rgba(109, 109, 109, 0.2), 0 1px 5px 0 rgba(109, 109, 109, 0.12)
+    `,
+    transition: `box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)`,
+   
+    
+
     '&:hover': {
-      backgroundColor: theme.palette.info.main,
+        boxShadow: `
+        0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2)
+        `,
       color: 'white'
     },
-    height: 30,
-    width: 80
+
   },
   addButton: {
     extend: ['buttonBase', 'fnButtons']
@@ -91,9 +109,11 @@ const styles = theme => ({
   },
   removeButton: {
     extend: 'buttonBase',
+    marginBottom: '20px',
+    opacity: '.5',
     '&:hover': {
-      fontWeight: 'bold',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      opacity: '1',
     }
   },
   // spans

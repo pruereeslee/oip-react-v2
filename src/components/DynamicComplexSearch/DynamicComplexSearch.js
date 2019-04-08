@@ -209,7 +209,7 @@ const ComplexBase = ({ id, state, mapping, handleUpdate, handleRemove, getFieldO
       className={__(classes.buttonBase, classes.removeButton)}
       onClick={(e) => { e.preventDefault(); handleRemove(id) }}
     >
-      (delete)
+      (remove row)
     </button>
   </>
 }
